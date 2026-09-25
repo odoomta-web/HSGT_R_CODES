@@ -1,0 +1,19 @@
+---
+title: "Code File Description"
+output: pdf_document
+---
+
+This document provides a brief description of the purpose and functionality of each code file: 
+
+- *SIMDATA.R* Contains the data generation functions.  
+
+- *Simulation.R*: Used to simulate data for various design. 
+
+- *evaluation.R*: Includes the functions for computing evaluation metrics.   
+
+- *est.R*: Handles the fitting of the thirteen models and their subsequent evaluation for the No outlier and bad-leverage point outlier . 
+
+- *ESTlevoutlier.R*: Handles the fitting of the thirteen models and their subsequent evaluation for the non-leverage point outlier . 
+
+- *SkinnyGibbsT.R*, *ExactGibbsT.R*, *SGlogit.R*, *EGlogit* , *skinny_gibbs_probit.R*, and  *exact_gibbs_probit.R* contain functions for implementing the following methods: Skinny Gibbs with t-link , Exact Gibbs with t-link, Skinny Gibbs with logit, Exact Gibbs with logit,  Skinny Gibbs with probit and Exact Gibbs with probit respectively.  
+
