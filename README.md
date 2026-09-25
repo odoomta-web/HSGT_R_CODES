@@ -98,23 +98,3 @@ source("R/est.R")        # -> results_Nooutlier, results_Outlier
 source("R/ESTlevoutlier.R")  # -> results_lev.outlier
 ```
 
-## Notes
-
-- The thresholding helper `Maj_sp()` is duplicated identically across all six
-  sampler files rather than factored into a shared utility file — left as-is
-  to keep each sampler file self-contained and independently runnable.
-- `R/est.R` and `R/ESTlevoutlier.R` originally contained machine-specific
-  absolute file paths; these have been changed to paths relative to the
-  project root (`data/...`), matching the layout written by `R/Simulation.R`.
-- `R/skinny_gibbs_probit.R` and `R/exact_gibbs_probit.R` call `rinvgamma()`
-  and `rmvn()`; explicit `library(invgamma)` / `library(mvnfast)` calls were
-  added so these files no longer rely on another script having loaded those
-  packages first.
-- Despite the filenames, `R/est.R` (not `R/ESTlevoutlier.R`) is the script
-  that handles the leverage-point outlier case; `R/ESTlevoutlier.R` handles
-  the non-leverage (mislabeled-response) outlier case. See `doc/DESC.Rmd`.
-
-## License
-
-No license file is currently included. Add a `LICENSE` file (e.g. MIT) if
-you intend this repository to be reused by others.
